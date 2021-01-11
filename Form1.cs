@@ -48,13 +48,13 @@ namespace smarthome
                 if (sensor_Flag == true)
                 {
                     SmtpClient SmtpServer = new SmtpClient();
-                    SmtpServer.Credentials = new NetworkCredential("esrameydan278@gmail.com", "34Dk1789");  //Buraya kendi gmail adresinizi ve şifrenizi girin
+                    SmtpServer.Credentials = new NetworkCredential("****", "*****");  //Buraya kendi gmail adresinizi ve şifrenizi girin
                     SmtpServer.Port = 587;                              //Port Numarası
                     SmtpServer.Host = "smtp.gmail.com";                 //Sunucu adresi
                     SmtpServer.EnableSsl = true;                        //SSL ayarı
                     MailMessage mail = new MailMessage();
-                    mail.To.Add("esrameydan278@gmail.com");            //Gönderilecek adres
-                    mail.From = new MailAddress("esrameydan278@gmail.com", "Arduino - PIR Sensörü");  //Mailin gönderildiği adres ve isim tanımlaması
+                    mail.To.Add("*****");            //Gönderilecek adres
+                    mail.From = new MailAddress("******", "Arduino - PIR Sensörü");  //Mailin gönderildiği adres ve isim tanımlaması
                     mail.Subject = "Hareket Algılandı!";     //Mail konusu
                     mail.Body = "Ortamda hareket algılandı!";//Mailin body kısmındaki metin
                     SmtpServer.Send(mail);  //Maili gönder */
